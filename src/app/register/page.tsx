@@ -49,7 +49,7 @@ export default function RegisterPage() {
             height={45}
             className="relative left-0 bottom-5"
           />
-          <span className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Sign in</span><br /><br/>
+          <span className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Sign up</span><br /><br/>
 
           <div className="w-80 text-sm text-gray-600">
           with your Google Account to continue to YouTube.<br/> This account will be available to other Google apps in the browser.
@@ -94,3 +94,4 @@ export default function RegisterPage() {
     </>
   );
 }
+
