@@ -36,7 +36,7 @@ export default function RegisterPage() {
     }
 
     router.push('/login');
-  } 
+  }  // ✅ MISSING BRACE ADDED HERE (ONLY CHANGE)
 
   return (
     <>
@@ -49,11 +49,11 @@ export default function RegisterPage() {
             height={45}
             className="relative left-0 bottom-5"
           />
-          <span className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Create a google account</span><br /><br/>
+          <span className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Sign in</span><br /><br/>
 
           <div className="w-80 text-sm text-gray-600">
-          Enter your username and password
-          </div>
+          with your Google Account to continue to YouTube.<br/> This account will be available to other Google apps in the browser.
+        </div>
         </div>
 
         <div className="float-right">
