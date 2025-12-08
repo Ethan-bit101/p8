@@ -277,9 +277,8 @@ interface JwtPayload {
         <h1 className="scroll-m-20 text-left text-4xl font-extrabold tracking-tight text-balance">
           Ethan-bytes101001
         </h1>
-        <p className = "inline-block">@Ethan</p>
-        <p className = "inline-block">500K subscribers</p>
-        <p className = "inline-block">12 videos</p>
+        <p className = "inline-block">@jetdelacruz@gbox.ncf.edu.ph</p>
+        
       </div>
     </div>
     </main>
@@ -531,5 +530,6 @@ interface JwtPayload {
     </div>
   );
 }
+
 
 
