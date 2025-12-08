@@ -64,6 +64,7 @@ export default function LoginPage() {
               placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              className = "border-black h-13"
             />
 
             <Input
@@ -71,6 +72,7 @@ export default function LoginPage() {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className = "border-black h-13"
             />
 
             {error && (
@@ -94,3 +96,4 @@ export default function LoginPage() {
 
   );
 }
+
