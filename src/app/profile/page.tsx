@@ -70,107 +70,114 @@ interface JwtPayload {
       <div className="shadow-xl border flex p-1 items-center justify-between fixed bg-white top-0 left-0 right-0 z-50">
 
         <div className="relative left-4 pr-15">
-          <Sheet >
-      <SheetTrigger asChild>
-         <Image
-         src="/menu.png"
-         alt="Like"
-         width={25}
-         height={25}
-         className="inline-block cursor-pointer" />
+           <Sheet >
+            <SheetTrigger asChild>
+               <Image
+               src="/menu.png"
+               alt="Like"
+               width={25}
+               height={25}
+               className="inline-block cursor-pointer" />
 
-      </SheetTrigger>
-      <SheetContent side = "left" className = "opacity-90 w-[400px] sm:w-[240px]">
-        <SheetHeader>
-          <ul className="-ml-5 mt-0">
-     <div className = "relative left-4">
-      <Link href="/dashboard" rel="noopener noreferrer">
-          <Image
-            src="/youtube.png"
-            alt="YouTube Logo"
-            width={37}
-            height={37}
-            className="inline-block relative left-5"
-          />
-          <h1 className="inline-block text-2xl font-bold left-7 relative">
-            Youtube<sup className="text-sm">PH</sup>
-          </h1>
-          </Link>
-          <ul>
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-          <Image src="/bahay.png" alt="Homepage" width={28} height={28} className="inline-block float-left" />
-        <span className = "relative left-5">
-                    <Link href="/dashboard" rel="noopener noreferrer">
-                          Home
-                    </Link>
-        </span>
-       </li>
+            </SheetTrigger>
+            <SheetContent side = "left" className = "opacity-90 w-[400px] sm:w-[240px]">
+              <SheetHeader>
+                <ul className="-ml-5 mt-0">
+           <div className = "relative left-4">
+            <Link href="/dashboard" rel="noopener noreferrer">
+                <Image
+                  src="/youtube.png"
+                  alt="YouTube Logo"
+                  width={37}
+                  height={37}
+                  className="inline-block relative left-5"
+                />
+                <h1 className="inline-block text-2xl font-bold left-7 relative">
+                  Youtube<sup className="text-sm">PH</sup>
+                </h1>
+                </Link>
+                <Separator/>
+                <ul>
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+                <Image src="/bahay.png" alt="Homepage" width={28} height={28} className="inline-block float-left" />
+              <span className = "relative left-5">
+                          <Link href="/dashboard" rel="noopener noreferrer">
+                                Home
+                          </Link>
+              </span>
+             </li>
 
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/shorts.png" alt="Homepage" width={28} height={28} className="inline-block float-left" />
-         <span className = "relative left-5">Shorts</span>
-       </li>
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/shorts.png" alt="Homepage" width={28} height={28} className="inline-block float-left" />
+               <span className = "relative left-5">Shorts</span>
+             </li>
 
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/subscription.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">Subscription</span>
-       </li>
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/subscription.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Subscription</span>
+             </li>
 
-
-       <Separator />
-          <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
-          Explore
-         </h4>
-
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/trending.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">Trending</span>
-       </li>
-
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/music.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">Music</span>
-       </li>
-
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/movies.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">Movies</span>
-       </li>
-      <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/history.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">History</span>
-       </li>
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/movies.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">History</span>
+             </li>
+            <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/history.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Playlist</span>
+             </li>
 
 
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/music.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">Music</span>
-       </li>
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/music.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Watch later</span>
+             </li>
 
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/gaming.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">Gaming</span>
-       </li>
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/gaming.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Liked videos</span>
+             </li>
 
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/youtube.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">News</span>
-       </li>
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/youtube.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">Sports</span>
-       </li>
-       <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
-         <Image src="/youtube.png" alt="Homepage" width={28} height={28} className="inline-block" />
-         <span className = "relative left-5">Fashion & Beauty</span>
-       </li>
-       <Separator />
-        </ul>
-     </div>
-       </ul>
-        </SheetHeader>
-      </SheetContent>
-    </Sheet>
+       <Separator/>
+       <h4 className="scroll-m-20 text-lg font-semibold tracking-tight">
+               More from Youtube
+               </h4>
+                <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/youtube.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Youtube Premium</span>
+             </li>
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/yt-studio.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Youtube Studio</span>
+             </li>
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/yt-music.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Youtube Music</span>
+             </li>
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/yt-kids.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Youtube kids</span>
+             </li>
+             </ul>
+       <Separator/>
+              <ul className = "relative top-6">
+             <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/download.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Downloads</span>
+             </li>
+              <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/feedback.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Send Feedback</span>
+             </li>
+              <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
+               <Image src="/about.png" alt="Homepage" width={28} height={28} className="inline-block" />
+               <span className = "relative left-5">Help</span>
+             </li>
+              </ul>
+           </div>
+             </ul>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
           <Link href="/dashboard" rel="noopener noreferrer">
           <Image
             src="/youtube.png"
@@ -530,6 +537,7 @@ interface JwtPayload {
     </div>
   );
 }
+
 
 
 
