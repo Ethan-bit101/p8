@@ -67,7 +67,7 @@ export default function LoginPage() {
               className = "border-black h-13"
             />
 
-            <Input
+             <Input
               type="password"
               placeholder="Password"
               value={password}
@@ -96,4 +96,5 @@ export default function LoginPage() {
 
   );
 }
+
 
