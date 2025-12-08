@@ -109,7 +109,7 @@ export default function Index() {
   target="_blank"
   rel="noopener noreferrer"
   className="text-blue-500 hover:underline">
-   <Button variant="outline" className="text-sm mb-2">Positions</Button>
+   <Button variant="outline" className="text-sm mb-2 text-black">Positions</Button>
   </a>
 
 </nav>
