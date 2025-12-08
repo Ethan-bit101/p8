@@ -7,40 +7,11 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { AlertCircleIcon, BadgeCheckIcon, CheckIcon } from "lucide-react"
 
-import {
-  Item,
-  ItemContent,
-  ItemDescription,
-  ItemGroup,
-  ItemMedia,
-  ItemTitle,
-} from "@/components/ui/item"
-const music = [
-  {
-    title: "Midnight City Lights",
-    artist: "Neon Dreams",
-    album: "Electric Nights",
-    duration: "3:45",
-  },
-  {
-    title: "Coffee Shop Conversations",
-    artist: "The Morning Brew",
-    album: "Urban Stories",
-    duration: "4:05",
-  },
-  {
-    title: "Digital Rain",
-    artist: "Cyber Symphony",
-    album: "Binary Beats",
-    duration: "3:30",
-  },
-]
-
 
 import { Sheet,
          SheetClose,
          SheetContent,
-         SheetDesription,
+         SheetDescription,
          SheetFooter,
          SheetHeader,
          SheetTitle,
@@ -411,4 +382,5 @@ Elyza has liked your videos
     </div>
   );
 }
+
 
