@@ -9,6 +9,9 @@ import { API_BASE } from '@/lib/config';
 
 import { FormEvent } from 'react';
 
+import Link from "next/link";
+import Image from "next/image";
+
 export default function LoginPage() {
   const router = useRouter();
 
@@ -38,10 +41,23 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <Card className="w-full max-w-sm p-5">
-        <CardContent>
-          <h1 className="text-xl font-bold mb-4">Login</h1>
+   <fieldset className="p-10 m-50 rounded-lg border border-black">
+        <div className="float-left">
+          <Image
+            src="/google.png"
+            alt="Homepage"
+            width={45}
+            height={45}
+            className="relative left-0 bottom-5"
+          />
+          <span className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Sign in</span><br /><br/>
+
+          <div className="w-80 text-sm text-gray-600">
+          with your Google Account to continue to YouTube.<br/> This account will be available to other Google apps in the browser.
+        </div>
+        </div>
+
+        <div className="float-right">
 
           <form onSubmit={handleLogin} className="space-y-4">
             <Input
@@ -73,8 +89,8 @@ export default function LoginPage() {
           >
             Create an account
           </Button>
-        </CardContent>
-      </Card>
-    </div>
+        </div>
+      </fieldset>
+
   );
 }
