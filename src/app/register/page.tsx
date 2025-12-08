@@ -36,28 +36,33 @@ export default function RegisterPage() {
     }
 
     router.push('/login');
-  }
+  } 
 
   return (
     <>
+      <fieldset className="p-10 m-50 rounded-lg border border-black">
+        <div className="float-left">
+          <Image
+            src="/google.png"
+            alt="Homepage"
+            width={45}
+            height={45}
+            className="relative left-0 bottom-5"
+          />
+          <span className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Create a google account</span><br /><br/>
 
-    <div className="flex items-center justify-center h-screen bg-white">
-      <Card className="w-full max-w-sm p-6">
-        <Image
-                  src="/google.png"
-                  alt="Homepage"
-                  width={60}
-                  height={60}
-                  className="relative left-35"
-                />
-        <CardContent>
-          <h1 className="text-xl font-bold mb-4">Register</h1>
+          <div className="w-80 text-sm text-gray-600">
+          Enter your username and password
+          </div>
+        </div>
 
+        <div className="float-right">
           <form onSubmit={handleRegister} className="space-y-4">
             <Input
               placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              className = " border-black h-13"
             />
 
             <Input
@@ -65,6 +70,7 @@ export default function RegisterPage() {
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className = " border-black h-13"
             />
 
             {error && (
@@ -83,10 +89,8 @@ export default function RegisterPage() {
           >
             Back to Login
           </Button>
-        </CardContent>
-      </Card>
-    </div>
-</>
-
+        </div>
+      </fieldset>
+    </>
   );
 }
