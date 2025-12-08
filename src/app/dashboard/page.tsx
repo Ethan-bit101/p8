@@ -144,7 +144,7 @@ export default function DashboardHome() {
           </Avatar>
 
           <span className="relative left-3 text-xl">
-            <Link href="/Multo" rel="noopener noreferrer">
+            <Link href="/multo" rel="noopener noreferrer">
                           Cup of Joe- Multo<br/>
                           </Link></span>
 
@@ -379,3 +379,4 @@ export default function DashboardHome() {
     </>
   );
 }
+
