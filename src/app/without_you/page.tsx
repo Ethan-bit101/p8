@@ -308,7 +308,7 @@ Elyza has liked your videos
       <figcaption className='inline-block relative left-5 hover:underline'>The 1975- About you</figcaption></Link>
     </figure>
         <figure className = "m-3 mt-5 inline-block">
-      <Link href="/without_you" rel="noopener noreferrer">
+      <Link href="/wasted" rel="noopener noreferrer">
 
       <Image src="/wasted.jpg" alt="Homepage" width={120} height={120} className="rounded-lg inline-block" />
       <figcaption className='inline-block relative left-5 hover:underline'>Juice Wrld, Lil Uzi Vert- Wasted</figcaption></Link>
@@ -381,5 +381,6 @@ Elyza has liked your videos
     </div>
   );
 }
+
 
 
