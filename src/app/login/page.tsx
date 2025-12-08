@@ -60,25 +60,25 @@ export default function LoginPage() {
         <div className="float-right">
 
           <form onSubmit={handleLogin} className="space-y-4">
-            <Input
+              <Input
               placeholder="Username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className = "border-black h-13"
+              className = " border-black h-13"
             />
 
-             <Input
+            <Input
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className = "border-black h-13"
+              className = " border-black h-13"
             />
 
             {error && (
               <p className="text-red-500 text-sm">{error}</p>
             )}
-
+            
             <Button className="w-full" type="submit">
               Login
             </Button>
@@ -96,5 +96,6 @@ export default function LoginPage() {
 
   );
 }
+
 
 
