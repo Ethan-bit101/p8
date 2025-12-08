@@ -89,23 +89,23 @@ export default function Index() {
   target="_blank"
   rel="noopener noreferrer"
   className="text-blue-500 hover:underline">
-   <Button variant="outline" className="text-sm mb-2">Register</Button>
+   <Button variant="outline" className="text-black text-sm mb-2">Register</Button>
   </a>
   <a
   href="/login"
   rel="noopener noreferrer"
   className="text-blue-500 hover:underline">
-   <Button variant="outline" className="text-sm mb-2">Login</Button>
+   <Button variant="outline" className="text-black text-sm mb-2">Login</Button>
   </a>
   <a
   href="/dashboard"
   target="_blank"
   rel="noopener noreferrer"
   className="text-blue-500 hover:underline">
-   <Button variant="outline" className="text-sm mb-2">Dashboard</Button>
+   <Button variant="outline" className="text-black text-sm mb-2">Dashboard</Button>
   </a>
   <a
-  href="/dashboard"
+  href="/positions"
   target="_blank"
   rel="noopener noreferrer"
   className="text-blue-500 hover:underline">
