@@ -52,7 +52,7 @@ export default function RegisterPage() {
           <span className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Sign up</span><br /><br/>
 
           <div className="w-80 text-sm text-gray-600">
-          with your Google Account to continue to YouTube.<br/> This account will be available to other Google apps in the browser.
+          Enter your username and password
         </div>
         </div>
 
@@ -94,4 +94,5 @@ export default function RegisterPage() {
     </>
   );
 }
+
 
