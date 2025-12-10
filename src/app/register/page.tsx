@@ -36,7 +36,7 @@ export default function RegisterPage() {
     }
 
     router.push('/login');
-  }  // ✅ MISSING BRACE ADDED HERE (ONLY CHANGE)
+  }
 
   return (
     <>
@@ -94,5 +94,4 @@ export default function RegisterPage() {
     </>
   );
 }
-
 

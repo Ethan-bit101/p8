@@ -33,6 +33,30 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import {
+  Calculator,
+  Calendar,
+  CreditCard,
+  Settings,
+  Smile,
+  User,
+} from "lucide-react"
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command"
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export default function DashboardLayout({children}: {
     children: React.ReactNode;
@@ -69,18 +93,30 @@ export default function DashboardLayout({children}: {
         <SheetHeader>
           <ul className="-ml-5 mt-0">
      <div className = "relative left-4">
-      <Link href="/dashboard" rel="noopener noreferrer">
-          <Image
-            src="/youtube.png"
-            alt="YouTube Logo"
-            width={37}
-            height={37}
-            className="inline-block relative left-5"
-          />
-          <h1 className="inline-block text-2xl font-bold left-7 relative">
-            Youtube<sup className="text-sm">PH</sup>
-          </h1>
-          </Link>
+<Tooltip>
+  <TooltipTrigger asChild>
+    <Link href="/dashboard" rel="noopener noreferrer">
+      <span className="inline-flex items-center">
+        <Image
+          src="/youtube.png"
+          alt="YouTube Logo"
+          width={37}
+          height={37}
+          className="inline-block relative left-5"
+        />
+        <h1 className="inline-block text-2xl font-bold left-7 relative">
+          Youtube<sup className="text-sm">PH</sup>
+        </h1>
+      </span>
+    </Link>
+  </TooltipTrigger>
+
+  <TooltipContent>
+    <p className="bg-gray">Youtube Home</p>
+  </TooltipContent>
+</Tooltip>
+
+
           <Separator/>
           <ul>
        <li className="inline-block text-sm w-47 hover:bg-gray-200 rounded-sm p-2 cursor-pointer">
@@ -176,13 +212,59 @@ export default function DashboardLayout({children}: {
           </h1>
           </Link>
         </div>
-        <ButtonGroup className="relative" style={{ right: "30px" }}>
-          <Input placeholder="Search..." className="w-150 h-10" />
-          <Button variant="outline" aria-label="Search" className="h-10 hover:bg-gray-100">
-            <SearchIcon />
-          </Button>
-        </ButtonGroup>
+           <Popover>
+  <PopoverTrigger asChild>
+    <ButtonGroup
+      className="relative cursor-pointer"
+      style={{ right: "30px" }}
+    >
+      <Input
+        placeholder="Search..."
+        className="w-150 h-10 rounded-r-none"
+      />
+
+      <Button
+        variant="outline"
+        aria-label="Search"
+        className="h-10 hover:bg-gray-100 rounded-l-none"
+      >
+        <SearchIcon />
+      </Button>
+    </ButtonGroup>
+  </PopoverTrigger>
+
+  <PopoverContent className="p-0 relative left-[-175]">
+    <Command className=" rounded-lg border shadow-md md:min-w-[640px]">
+        <CommandList>
+        <CommandEmpty>No results found.</CommandEmpty>
+          <CommandItem>
+            <span> <Link href="/multo" rel="noopener noreferrer">Multo</Link></span>
+          </CommandItem>
+
+          <CommandItem>
+            <span> <Link href="/about_you" rel="noopener noreferrer">About you</Link></span>
+          </CommandItem>
+
+          <CommandItem>
+            <span> <Link href="/walking_back_home" rel="noopener noreferrer">Walking back home</Link></span>
+          </CommandItem>
+
+          <CommandItem>
+            <span> <Link href="/foolish_heart" rel="noopener noreferrer">Foolish heart</Link></span>
+          </CommandItem>
+
+          <CommandItem>
+            <span> <Link href="/end_of_beginning" rel="noopener noreferrer">End of beginning</Link></span>
+          </CommandItem>
+      </CommandList>
+    </Command>
+  </PopoverContent>
+</Popover>
+
+
  <div className="absolute left-250">
+  <Tooltip>
+      <TooltipTrigger asChild>
           <Image
             src="/microphone.png"
             alt="Microphone"
@@ -190,7 +272,12 @@ export default function DashboardLayout({children}: {
             height={25}
             className="inline-block"
           />
-        </div>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p className = "bg-gray">Search with your voice</p>
+      </TooltipContent>
+    </Tooltip>
+                  </div>
 
 <div className = "relative left-40">
           <Popover>
@@ -198,11 +285,11 @@ export default function DashboardLayout({children}: {
           <Button variant = "outline">Create<span className = "text-2xl">+</span></Button>
 
   </PopoverTrigger>
-  <PopoverContent>
+  <PopoverContent className = "w-40">
          <ul>
-          <li>Upload Video</li>
-          <li>Go live</li>
-          <li>Create post</li>
+          <li className = "text-small cursor-pointer  p-1 hover:bg-gray-100">Upload Video</li>
+          <li className = "text-small cursor-pointer  p-1 hover:bg-gray-100">Go live</li>
+          <li className = "text-small cursor-pointer  p-1 hover:bg-gray-100">Create post</li>
          </ul>
     </PopoverContent>
 </Popover>

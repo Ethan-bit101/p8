@@ -7,6 +7,21 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { AlertCircleIcon, BadgeCheckIcon, CheckIcon } from "lucide-react"
 
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemGroup,
+  ItemMedia,
+  ItemTitle,
+} from "@/components/ui/item"
+
+import { ChevronsUpDown } from "lucide-react"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 
 import { Sheet,
          SheetClose,
@@ -28,6 +43,17 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
+
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command"
 
 import { SearchIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -66,7 +92,7 @@ interface JwtPayload {
 
 
   return (
-    <div>
+    <div className="p-6">
        <div className="shadow-xl border flex p-1 items-center justify-between fixed bg-white top-0 left-0 right-0 z-50">
 
               <div className="relative left-4 pr-15">
@@ -191,12 +217,55 @@ interface JwtPayload {
                 </h1>
                 </Link>
               </div>
-              <ButtonGroup className="relative" style={{ right: "30px" }}>
-                <Input placeholder="Search..." className="w-150 h-10" />
-                <Button variant="outline" aria-label="Search" className="h-10 hover:bg-gray-100">
-                  <SearchIcon />
-                </Button>
-              </ButtonGroup>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <ButtonGroup
+                    className="relative cursor-pointer"
+                    style={{ right: "30px" }}
+                  >
+                    <Input
+                      placeholder="Search..."
+                      className="w-150 h-10 rounded-r-none"
+                      />
+
+                    <Button
+                      variant="outline"
+                      aria-label="Search"
+                      className="h-10 hover:bg-gray-100 rounded-l-none"
+                    >
+                      <SearchIcon />
+                    </Button>
+                  </ButtonGroup>
+                </PopoverTrigger>
+
+                <PopoverContent className="p-0 relative left-[-175]">
+                  <Command className=" rounded-lg border shadow-md md:min-w-[640px]">
+                      <CommandList>
+                      <CommandEmpty>No results found.</CommandEmpty>
+
+                        <CommandItem>
+                          <span><Link href="/multo" rel="noopener noreferrer">Multo</Link></span>
+                        </CommandItem>
+
+                        <CommandItem>
+                          <span><Link href="/about_you" rel="noopener noreferrer">About you</Link></span>
+                        </CommandItem>
+
+                        <CommandItem>
+                          <span><Link href="/walking_back_home" rel="noopener noreferrer">Walking back home</Link></span>
+                        </CommandItem>
+
+                        <CommandItem>
+                          <span><Link href="/foolish_heart" rel="noopener noreferrer">Foolish Heart</Link></span>
+                        </CommandItem>
+
+                        <CommandItem>
+                          <span><Link href="/end_of_beginning" rel="noopener noreferrer">End of Beginning</Link></span>
+                        </CommandItem>
+                    </CommandList>
+                  </Command>
+                </PopoverContent>
+              </Popover>
        <div className="absolute left-250">
                 <Image
                   src="/microphone.png"
@@ -233,11 +302,10 @@ interface JwtPayload {
                 className="absolute" style={{ left: "1400px" }}
               />
       </PopoverTrigger>
-        <PopoverContent className = "w-50 cursor-pointer">
+        <PopoverContent className = "relative top-8 left-20 w-50 cursor-pointer">
            <h4 className="scroll-m-20 text-md text-center font-semibold tracking-tight">
             Notification
           </h4>
-      Elyza has liked your videos
 
           </PopoverContent>
       </Popover>
@@ -273,78 +341,90 @@ interface JwtPayload {
 
 
             </div>
-     <div className = "float-right relative top-10 left-[-50px] w-100">
-           <div className = "border p-5">
-           <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
-           Mix for Ethan-bytes101001
-           </h3>
-           <p className = "text-small">Mixes are playlists Youtube makes for you</p>
+     <div className = "float-right relative top-4 left-[-50px] w-100">
+    <div className = "bg-white rounded-sm">
+    <figure className = "inline-block">
+      <Link href="/multo" rel="noopener noreferrer">
 
-           </div>
+      <Image src="/multo.jpg" alt="multo" width={150} height={150} className="rounded-md inline-block" />
+      <figcaption className='absolute inline-block relative left-2 top-[18]'>
+        <span className = "text-lg">Cup of Joe- Multo</span><br/>
+      <span className = "text-small text-gray-500">Ethan-bytes101001</span><br/>
+      <span className = "text-small text-gray-500">500K views</span><br/>
+      </figcaption></Link>
 
-         <div className = "bg-white rounded-sm">
-            <figure className = "m-3 inline-block">
-           <Link href="/Every_breath_you_take" rel="noopener noreferrer">
+    </figure>
+    <figure className = " inline-block">
+      <Link href="/walking_back_home" rel="noopener noreferrer">
 
-           <Image src="/every_breath_you take.jpg" alt="Homepage" width={120} height={120} className="rounded-lg inline-block" />
-           <figcaption className='inline-block relative left-5 hover:underline'>The Police- Every breath you take</figcaption></Link>
-         </figure>
+      <Image src="/walking_back_home.jpg" alt="Homepage" width={150} height={150} className="rounded-md inline-block" />
+      <figcaption className='absolute inline-block relative left-2 top-[18]'>
+        <span>Fur- Walking back home</span><br/>
+        <span className = "text-small text-gray-500">Ethan-bytes101001</span><br/>
+      <span className = "text-small text-gray-500">3M views</span><br/>
+        </figcaption></Link>
+    </figure>
+    <figure className = "inline-block">
+      <Link href="/about_you" rel="noopener noreferrer">
 
-         <figure className = "m-3 inline-block">
-           <Link href="/multo" rel="noopener noreferrer">
+      <Image src="/about_you.jpg" alt="Homepage" width={150} height={150} className="rounded-md inline-block" />
+      <figcaption className='absolute inline-block relative left-2 top-[18]'><span>The 1975- About you</span><br/>
+      <span className = "text-small text-gray-500">Ethan-bytes101001</span><br/>
+      <span className = "text-small text-gray-500">3M views</span><br/>
+      </figcaption></Link>
+    </figure>
+    <figure className = "inline-block">
+      <Link href="/without_you" rel="noopener noreferrer">
 
-           <Image src="/multo.jpg" alt="Homepage" width={120} height={120} className="rounded-lg inline-block" />
-           <figcaption className='inline-block relative left-5 hover:underline'>Cup of Joe- Multo</figcaption></Link>
-         </figure>
-         <figure className = "m-3 inline-block">
-           <Link href="/walking_back_home" rel="noopener noreferrer">
+      <Image src="/without_you.jpg" alt="Homepage" width={150} height={150} className="rounded-md inline-block" />
+      <figcaption className='absolute inline-block relative left-2 top-[18]'><span>Air Supply- Without you</span><br/>
+      <span className = "text-small text-gray-500">Ethan-bytes101001</span><br/>
+      <span className = "text-small text-gray-500">3M views</span><br/>
+      </figcaption></Link>
+    </figure>
+        <figure className = "inline-block">
+      <Link href="/without_you" rel="noopener noreferrer">
 
-           <Image src="/walking_back_home.jpg" alt="Homepage" width={120} height={120} className="rounded-lg inline-block" />
-           <figcaption className='inline-block relative left-5 hover:underline'>Fur- Walking back home</figcaption></Link>
-         </figure>
-         <figure className = "m-3 inline-block">
-           <Link href="/about_you" rel="noopener noreferrer">
+      <Image src="/wasted.jpg" alt="Homepage" width={150} height={150} className="rounded-md inline-block" />
+      <figcaption className='absolute inline-block relative left-2 top-[18]'><span>Juice Wrld, Lil Uzi Vert- Wasted</span><br/>
+      <span className = "text-small text-gray-500">Ethan-bytes101001</span><br/>
+      <span className = "text-small text-gray-500">3M views</span><br/>
+      </figcaption></Link>
+    </figure>
+            <figure className = " inline-block">
+      <Link href="/end_of_beginning" rel="noopener noreferrer">
 
-           <Image src="/about_you.jpg" alt="Homepage" width={120} height={120} className="rounded-lg inline-block" />
-           <figcaption className='inline-block relative left-5 hover:underline'>The 1975- About you</figcaption></Link>
-         </figure>
-         <figure className = "m-3 mt-5 inline-block">
-           <Link href="/without_you" rel="noopener noreferrer">
+      <Image src="/end_of_beginning.jpg" alt="Homepage" width={150} height={150} className="rounded-md inline-block" />
+      <figcaption className='absolute inline-block relative left-2 top-[18]'>
+        <span>Djo- End of Beginning</span><br/>
+      <span className = "text-small text-gray-500">Ethan-bytes101001</span><br/>
+      <span className = "text-small text-gray-500">3M views</span><br/>
+      </figcaption></Link>
+    </figure>
+        <figure className = " inline-block">
+      <Link href="/foolish_heart" rel="noopener noreferrer">
 
-           <Image src="/without_you.jpg" alt="Homepage" width={120} height={120} className="rounded-lg inline-block" />
-           <figcaption className='inline-block relative left-5 hover:underline'>Air Supply- Without you</figcaption></Link>
-         </figure>
-             <figure className = "m-3 mt-5 inline-block">
-           <Link href="/without_you" rel="noopener noreferrer">
+      <Image src="/foolish_heart.jpg" alt="Homepage" width={150} height={150} className="rounded-md inline-block" />
+      <figcaption className='absolute inline-block relative left-2 top-[18]'>
+        <span>Steve Perry- Foolish Heart</span><br/>
+      <span className = "text-small text-gray-500">Ethan-bytes101001</span><br/>
+      <span className = "text-small text-gray-500">3M views</span><br/>
+      </figcaption></Link>
+    </figure>
+    </div>
 
-           <Image src="/wasted.jpg" alt="Homepage" width={120} height={120} className="rounded-lg inline-block" />
-           <figcaption className='inline-block relative left-5 hover:underline'>Juice Wrld, Lil Uzi Vert- Wasted</figcaption></Link>
-         </figure>
-                 <figure className = "m-3 mt-5 inline-block">
-           <Link href="/end_of_beginning" rel="noopener noreferrer">
-
-           <Image src="/end_of_beginning.jpg" alt="Homepage" width={120} height={120} className="rounded-lg inline-block" />
-           <figcaption className='inline-block relative left-5 hover:underline'>Djo- End of Beginning</figcaption></Link>
-         </figure>
-             <figure className = "m-3 mt-5 inline-block">
-           <Link href="/foolish_heart" rel="noopener noreferrer">
-
-           <Image src="/foolish_heart.jpg" alt="Homepage" width={120} height={120} className="rounded-lg inline-block" />
-           <figcaption className='inline-block relative left-5 hover:underline'>Steve Perry- Foolish Heart</figcaption></Link>
-         </figure>
-         </div>
       </div>
    <main className="ml-[50px]">
 
       <fieldset className = "relative bottom-[-30px]">
         <figure>
 
-      <iframe width="905" height="500" src="https://www.youtube.com/embed/bUAzCwmHYcY?si=fuD-Gt-igUUVH7pD" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-      <figcaption className = "relative top-5">
+      <iframe width="905" height="500" src="https://www.youtube.com/embed/joJfbGhlY00?si=TCEnddq4bpqAL9m_" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      <figcaption className = "relative top-2">
 
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-        Parokya ni- Edgar- Your song
-      </h3>
+      Parokya ni Edgar- Your song
+    </h3>
     <div className = "relative top-[0px] flex p-1 items-center justify-between">
 
        <Avatar className="float-left">
@@ -373,14 +453,12 @@ interface JwtPayload {
     </div>
     </figcaption>
       </figure>
-
+      <h4 className="scroll-m-20 text-small font-semibold tracking-tight">
+      10M views 5 years ago
+    </h4>
       </fieldset>
-      <div className = "float-right">
-
-      </div>
     </main>
     </div>
   );
 }
-
 

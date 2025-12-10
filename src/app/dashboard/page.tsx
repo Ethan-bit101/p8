@@ -281,11 +281,11 @@ export default function DashboardHome() {
       <div className = "ml-5 inline-block hover:bg-gray-100 hover: transition-colors duration-300 ease-in-out">
       <figure className="p-5 rounded-md">
         <Image
-          src="/end_of_beginning.jpg"
-          alt="Homepage"
-          width={440}
-          height={440}
-          className="inline-block rounded-md "
+        src = "/end_of_beginning.jpg"
+        alt = "end of beginning"
+        width = {440}
+        height = {440}
+        className = "inline-block rounded-md"
         />
         <figcaption className="h-20">
           <div className = "ml-1 m-2">
@@ -379,4 +379,3 @@ export default function DashboardHome() {
     </>
   );
 }
-
